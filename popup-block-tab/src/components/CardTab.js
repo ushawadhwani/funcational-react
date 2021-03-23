@@ -24,8 +24,6 @@ function TabPanel(props) {
           <Typography>{children}</Typography>
         </Box>
       )}
-
-      {index === 0 && <IconTab />}
     </div>
   );
 }
