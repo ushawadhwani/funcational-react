@@ -1,0 +1,5 @@
+{
+    "title":"Usha & Ritesh",
+    "subTitle":{"subject":"Summary","percentage":"65"},
+    "detail":[{"heading":"Concept","percentage":"65", "detail":[{"heading":"some text1","percentage":"65"},{"heading":"some text2","percentage":"65"}]},{"heading":"Market", "percentage":"65","detail":[{"heading":"some text1","percentage":"65"},{"heading":"some text2","percentage":"65"}]}]
+  }
