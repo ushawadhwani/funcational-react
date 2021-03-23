@@ -24,8 +24,6 @@ function TabPanel(props) {
           <Typography>{children}</Typography>
         </Box>
       )}
-
-      {index === 0 && <IconTab />}
     </div>
   );
 }
@@ -51,14 +49,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MyTabs() {
+export default function MyTabs(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
@@ -71,20 +68,19 @@ export default function MyTabs() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          {props.myTabData.myTabs.map((data, index) => {
+            return <Tab label={data.title} {...a11yProps(index)} />;
+          })}
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+      {props.myTabData.myTabs.map((data, index) => {
+        return (
+          <TabPanel value={value} index={index}>
+            {data.content}
+            {data.isIcon && <IconTab />}
+          </TabPanel>
+        );
+      })}
     </div>
   );
 }

@@ -1,0 +1,6 @@
+{
+    "myTabs":[
+      {"title":"Group Updates", "content":[{"text":"statement 1"},{"text":"statement 2"},{"text":"statement 3"}] , "isIcon":true },
+      {"title":"Trans Updates" ,  "content":[]}
+    ]
+  }

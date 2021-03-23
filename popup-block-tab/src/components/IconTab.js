@@ -47,9 +47,12 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width: 240,
     flexGrow: 1,
-    width: "52.2%",
     backgroundColor: theme.palette.background.paper,
+  },
+  innerIcon: {
+    minWidth: 10,
   },
 }));
 
@@ -67,22 +70,37 @@ export default function IconTab() {
         <Tabs
           value={value}
           onChange={handleChange}
-          variant="scrollable"
-          scrollButtons="off"
           aria-label="scrollable prevent tabs example"
         >
-          <Tab icon={<PhoneIcon />} aria-label="phone" {...a11yProps(0)} />
+          <Tab
+            icon={<PhoneIcon />}
+            aria-label="phone"
+            {...a11yProps(0)}
+            className={classes.innerIcon}
+          />
           <Tab
             icon={<FavoriteIcon />}
             aria-label="favorite"
+            className={classes.innerIcon}
             {...a11yProps(1)}
           />
-          <Tab icon={<PersonPinIcon />} aria-label="person" {...a11yProps(2)} />
-          <Tab icon={<HelpIcon />} aria-label="help" {...a11yProps(3)} />
+          <Tab
+            icon={<PersonPinIcon />}
+            aria-label="person"
+            {...a11yProps(2)}
+            className={classes.innerIcon}
+          />
+          <Tab
+            icon={<HelpIcon />}
+            aria-label="help"
+            {...a11yProps(3)}
+            className={classes.innerIcon}
+          />
           <Tab
             icon={<ShoppingBasket />}
             aria-label="shopping"
             {...a11yProps(4)}
+            className={classes.innerIcon}
           />
         </Tabs>
       </AppBar>
