@@ -1,0 +1,6 @@
+{
+    "myTabs":[
+      {"title":"Group Updates", "content":"Group updates values" , "isIcon":true },
+      {"title":"Trans Updates" ,  "content":"Trans updates values"}
+    ]
+  }
