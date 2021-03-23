@@ -8,7 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const Accordion = withStyles({
   root: {
-    border: "1px solid rgba(0, 0, 0, .125)",
+    border: "0px solid rgba(0, 0, 0, 0)",
     boxShadow: "none",
     "&:not(:last-child)": {
       borderBottom: 0,
@@ -25,25 +25,23 @@ const Accordion = withStyles({
 
 const AccordionSummary = withStyles({
   root: {
-    backgroundColor: "rgba(0, 0, 0, .03)",
-    borderBottom: "1px solid rgba(0, 0, 0, .125)",
-    marginBottom: -1,
-    minHeight: 56,
-    "&$expanded": {
-      minHeight: 56,
-    },
-  },
-  content: {
-    "&$expanded": {
-      margin: "12px 0",
-    },
+    flexDirection: "row-reverse",
   },
   expanded: {},
+  expandIcon: {
+    paddingRight: 20,
+    paddingLeft: 20,
+    "&$expanded": {
+      paddingLeft: 20,
+      paddingRight: 20,
+    },
+  },
 })(MuiAccordionSummary);
 
 const AccordionDetails = withStyles((theme) => ({
   root: {
-    padding: theme.spacing(2),
+    padding: "0px 0px 10px",
+    paddingLeft: 50,
   },
 }))(MuiAccordionDetails);
 
@@ -51,7 +49,7 @@ export default function AccordionsComponent({ detail }) {
   const [expanded, setExpanded] = React.useState("panel0");
 
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : "panel0");
+    setExpanded(newExpanded ? panel : false);
   };
 
   return (
@@ -67,7 +65,6 @@ export default function AccordionsComponent({ detail }) {
               aria-controls="panel1d-content"
               id="panel1d-header"
               expandIcon={<ExpandMoreIcon />}
-              IconButtonProps={{ edge: "start" }}
             >
               <CustomGrid
                 leftValue={value.heading}

@@ -3,7 +3,6 @@ import "./App.css";
 import popupData from "./assets/json/popupData.json";
 import CustomPopup from "./components/CustomPopup";
 import Button from "@material-ui/core/Button";
-import CustomizedDialogs from "./components/PopUp";
 import MyTabs from "./components/Tab";
 import MyBlock from "./components/Block";
 

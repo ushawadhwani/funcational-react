@@ -79,7 +79,7 @@ export default function CustomPopup({
           <CustomGrid
             leftValue={subTitle.subject}
             rightValue={subTitle.percentage}
-            variant="h4"
+            variant="h5"
           />
           <AccordionsComponent detail={detail} />
         </DialogContent>

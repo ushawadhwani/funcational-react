@@ -1,5 +1,6 @@
 {
-    "title":"Usha & Ritesh",
-    "subTitle":{"subject":"Summary","percentage":"65"},
-    "detail":[{"heading":"Concept","percentage":"65", "detail":[{"heading":"some text1","percentage":"65"},{"heading":"some text2","percentage":"65"}]},{"heading":"Market", "percentage":"65","detail":[{"heading":"some text1","percentage":"65"},{"heading":"some text2","percentage":"65"}]}]
+    "title":"First Impression",
+    "subTitle":{"subject":"Summary","percentage":"65%"},
+    "detail":[{"heading":"Concept","percentage":"35%", "detail":[{"heading":"Do you think it is easy or hard to copy the concept","percentage":"0/1"},{"heading":"How close this idea make you feel","percentage":"0/1"}]},{"heading":"Market", "percentage":"65%","detail":[{"heading":"What is nice to have?","percentage":"0/1"},{"heading":"What is must have?","percentage":"1/1"}]}]
   }
+
